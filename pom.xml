@@ -30,13 +30,13 @@
 
 	</properties>
 	
-	<repositories>
+	<!--<repositories>
 		<repository>
 	      <id>nexus</id>
 	      <name>Remote repo</name>
 	      <url>http://localhost:8081/repository/kakarot-repo-group/</url>
 	    </repository>
-	</repositories>
+	</repositories>-->
 
 	<dependencies>
 		<dependency>
