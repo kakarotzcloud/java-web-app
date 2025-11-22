@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<version>0.0.2</version>
 	
-	<name>jenkins-02-web-application</name>
+	<name>jenkins-name-web-application</name>
 
 	<description>Maven Web Project for Java Project</description>
 
@@ -123,7 +123,7 @@
 	</distributionManagement>
 
 	<build>
-		<finalName>jenkins-02-web-application</finalName>
+		<finalName>jenkins-finalName-web-application</finalName>
 		
 		<plugins>
 			<plugin>
