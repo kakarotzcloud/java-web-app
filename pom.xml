@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.mt</groupId>
-	<artifactId>jenkins-1-web-application</artifactId>
+	<artifactId>jenkins-2-web-application</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1</version>
 	
