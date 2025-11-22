@@ -123,7 +123,7 @@
 	</distributionManagement>
 
 	<build>
-		<finalName>maven-web-application</finalName>
+		<finalName>jenkins-02-web-application</finalName>
 		
 		<plugins>
 			<plugin>
