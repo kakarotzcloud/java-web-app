@@ -1,4 +1,4 @@
-node{
+node('master'){
     stage('Example Stage') {
         echo 'Hello, World!'
     }
@@ -9,13 +9,13 @@ node{
     stage('build'){
         bat """${mavenhome}"\\bin\\mvn" clean package"""
     }
-    stage('build'){
+    stage('code quality'){
         bat """${mavenhome}"\\bin\\mvn" clean sonar:sonar"""
     }
-    stage('build'){
+    stage('repository'){
         bat """${mavenhome}"\\bin\\mvn" clean package"""
     }
     stage('hosting'){
-        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://100.31.86.119:8082/')], contextPath: '/abc', onFailure: false, war: '**/*.war'
+        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://100.31.86.119:8082/')], contextPath: '/myapp', war: '**/*.war'
     }
 }
