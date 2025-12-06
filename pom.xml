@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.mt</groupId>
-	<artifactId>jenkins-04-web-application</artifactId>
+	<artifactId>jenkins-2-web-application</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.2-SNAPSHOT</version>
 	
@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://localhost:9000/</sonar.host.url>
+		<sonar.host.url>http://192.168.1.3:9000/</sonar.host.url>
 		<sonar.login>squ_dcc336db1a4088d4ba48d62f28b2379998a13b0a</sonar.login>
 		<!-- <sonar.login>admin</sonar.login> -->
 		<!-- <sonar.password>sonar</sonar.password>  -->
