@@ -39,11 +39,11 @@
 	</repositories>
 
 	<dependencies>
-		<dependency>
+		<!--<dependency>
 			<groupId>com.s</groupId>
 			<artifactId>mail</artifactId>
 			<version>1.0.0</version>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
