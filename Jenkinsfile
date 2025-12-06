@@ -2,7 +2,6 @@ node{
     stage('Example Stage') {
         echo 'Hello, World!'
     }
-    
     properties([pipelineTriggers([githubPush()])])
     
     def mavenhome = tool name : "3.9.11"
