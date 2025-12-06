@@ -5,9 +5,9 @@
 	<groupId>com.mt</groupId>
 	<artifactId>jenkins-2-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	
-	<name>maven-web-application</name>
+	<name>jenkins-23-nov-web-application</name>
 
 	<description>Maven Web Project for Java Project</description>
 
@@ -37,7 +37,7 @@
 	      <url>http://localhost:8081/repository/kakarot-repo-group/</url>
 	    </repository>
 	</repositories>-->
-
+	
 	<dependencies>
 		<!--<dependency>
 			<groupId>com.s</groupId>
@@ -111,21 +111,28 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Releases Nexus Repository</name>
-	      <url>http://localhost:8081/repository/wallmart-release/</url>
+	      <!--<url>http://localhost:8081/repository/wallmart-release/</url>-->
+			<url>http://localhost:8081/repository/kakarot-web-app-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Snapshot Nexus Repository </name>
-	      <url>http://localhost:8081/repository/wallmart-snapshot/</url>
+	      <!--<url>http://localhost:8081/repository/wallmart-snapshot/</url>-->
+			<url>http://localhost:8081/repository/kakarot-web-app-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
 
 	<build>
-		<finalName>maven-web-application</finalName>
+		<finalName>jenkins-finalName-web-application</finalName>
 		
 		<plugins>
+			<plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.10.0.2594</version>
+            </plugin>
 			<plugin>
                             <groupId>org.apache.maven.plugins</groupId>
                             <artifactId>maven-war-plugin</artifactId>
