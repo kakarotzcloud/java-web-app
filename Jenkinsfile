@@ -4,6 +4,7 @@ pipeline{
         maven '3.9.11'
     }
 
+    
     properties([pipelineTriggers([githubPush()])])
 
     stages {
