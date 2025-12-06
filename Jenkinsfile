@@ -5,7 +5,9 @@ pipeline{
     }
 
     
-    properties([pipelineTriggers([githubPush()])])
+    triggers {
+        githubPush()
+    }
 
     stages {
         stage('Example Stage') {
