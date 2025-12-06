@@ -2,7 +2,9 @@ node{
     stage('Example Stage') {
         echo 'Hello, World!'
     }
+    
     properties([pipelineTriggers([githubPush()])])
+    
     def mavenhome = tool name : "3.9.11"
     stage('git'){
         git branch: 'dev', credentialsId: 'c29c8610-3b6c-4495-987b-f1e0e93607c8', url: 'https://github.com/kakarotzcloud/java-web-app.git'
