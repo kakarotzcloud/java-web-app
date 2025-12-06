@@ -1,22 +1,21 @@
-node{
-    stage('Example Stage') {
-        echo 'Hello, World!'
+pipeline{
+    agent any
+    tools {
+        maven '3.9.11'
     }
-    properties([pipelineTriggers([githubPush()])])    
-    def mavenhome = tool name : "3.9.11"
-    stage('git'){
-        git branch: 'dev', credentialsId: 'c29c8610-3b6c-4495-987b-f1e0e93607c8', url: 'https://github.com/kakarotzcloud/java-web-app.git'
-    }
-    stage('build'){
-        bat """${mavenhome}"\\bin\\mvn" clean package"""
-    }
-    stage('code quality'){
-        bat """${mavenhome}"\\bin\\mvn" clean sonar:sonar"""
-    }
-    stage('repository'){
-        bat """${mavenhome}"\\bin\\mvn" clean package"""
-    }
-    stage('hosting'){
-        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://100.31.86.119:8082/')], contextPath: '/myapp', war: '**/*.war'
+
+    properties([pipelineTriggers([githubPush()])])
+
+    stages {
+        stage('Example Stage') {
+            steps {
+                echo 'Hello, World!'
+            }
+        }
+        stage('git') {
+            steps {
+                git branch: 'dev', credentialsId: 'c29c8610-3b6c-4495-987b-f1e0e93607c8', url: 'https://github.com/kakarotzcloud/java-web-app.git'
+            }
+        }
     }
 }
